@@ -1,0 +1,643 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net.Sockets;
+using System.Net;
+/*
+fase 1: 1
+fase 2: 0 , 1
+fase 3: 1 , 0 , 0
+fase 4: 1 , 0 , 1 , 0
+fase 5: 0 , 0 , 1 , 1 , 0
+fase 6: 0 , 1 , 1 , 0 , 1 , 1
+fase 7: 1 , 1 , 0 , 1 , 1 , 0 , 1
+fase 8: 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1
+fase 9: 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1
+fase 10: 1 , 1 , 0 , 1 , 0 , 0 , 0 , 1 , 0 , 1
+*/
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("QUE COMEÇEM OS JOGOOOOS!!! (hehe)\n\n");
+
+            Console.WriteLine("Fase 1\n");
+            Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+
+            var aux1 = Console.ReadLine();
+            int fase1 = int.Parse(aux1);
+
+            if(fase1 == 0)
+            {
+                Console.WriteLine("Abriu!");
+                Console.WriteLine("Parabéns você passou da fase 1!\n");
+                Console.WriteLine("Ok ok, vamos combinar que essa foi fácil (hehe)");
+                Console.WriteLine("Apartir de agora todos as fases terão uma porta a mais depois de cada nível.");
+                Console.WriteLine("OBS: se você perder terá que voltar do início :)");
+
+                for(int i = 0; i<2; i++)
+                {
+                    Console.WriteLine("Fase 2\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux2 = Console.ReadLine();
+                    int fase2 = int.Parse(aux2);
+                    if(fase2 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux3 = Console.ReadLine();
+                    int fase3 = int.Parse(aux3);
+                    if(fase3 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 2!\n");
+                    }
+                    }                
+                }
+
+                for(int i = 0; i<3; i++)
+                {
+                    Console.WriteLine("Fase 3\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux4 = Console.ReadLine();
+                    int fase4 = int.Parse(aux4);
+                    if(fase4 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux5 = Console.ReadLine();
+                    int fase5 = int.Parse(aux5);
+                    if(fase5 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux6 = Console.ReadLine();
+                    int fase6 = int.Parse(aux6);
+                    if(fase6 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 3!\n");
+                    }
+                    }               
+                }
+
+                for(int i = 0; i<4; i++)
+                {
+                    Console.WriteLine("Fase 4\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux7 = Console.ReadLine();
+                    int fase7 = int.Parse(aux7);
+                    if(fase7 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux8 = Console.ReadLine();
+                    int fase8 = int.Parse(aux8);
+                    if(fase8 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux9 = Console.ReadLine();
+                    int fase9 = int.Parse(aux9);
+                    if(fase9 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux10 = Console.ReadLine();
+                    int fase10 = int.Parse(aux10);
+                    if(fase10 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 4!\n");
+                    }
+                    }                 
+                }
+
+                for(int i = 0; i<5; i++)
+                {
+                    Console.WriteLine("Fase 5\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux11 = Console.ReadLine();
+                    int fase11 = int.Parse(aux11);
+                    if(fase11 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux12 = Console.ReadLine();
+                    int fase12 = int.Parse(aux12);
+                    if(fase12 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux13 = Console.ReadLine();
+                    int fase13 = int.Parse(aux13);
+                    if(fase13 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux14 = Console.ReadLine();
+                    int fase14 = int.Parse(aux14);
+                    if(fase14 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux14 = Console.ReadLine();
+                    int fase14 = int.Parse(aux14);
+                    if(fase14 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 5!\n");
+                    }
+                    }              
+                }
+
+                for(int i = 0; i<6; i++)
+                {
+                    Console.WriteLine("Fase 6\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux15 = Console.ReadLine();
+                    int fase15 = int.Parse(aux15);
+                    if(fase15 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux16 = Console.ReadLine();
+                    int fase16 = int.Parse(aux16);
+                    if(fase16 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux17 = Console.ReadLine();
+                    int fase17 = int.Parse(aux17);
+                    if(fase17 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux18 = Console.ReadLine();
+                    int fase18 = int.Parse(aux18);
+                    if(fase18 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux19 = Console.ReadLine();
+                    int fase19 = int.Parse(aux19);
+                    if(fase19 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==5)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux20 = Console.ReadLine();
+                    int fase20 = int.Parse(aux20);
+                    if(fase20 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 6!\n");
+                    }
+                    }              
+                }
+
+                for(int i = 0; i<7; i++)
+                {
+                    Console.WriteLine("Fase 7\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux21 = Console.ReadLine();
+                    int fase21 = int.Parse(aux21);
+                    if(fase21 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux22 = Console.ReadLine();
+                    int fase22 = int.Parse(aux22);
+                    if(fase22 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux23 = Console.ReadLine();
+                    int fase23 = int.Parse(aux23);
+                    if(fase23 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux24 = Console.ReadLine();
+                    int fase24 = int.Parse(aux24);
+                    if(fase24 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux25 = Console.ReadLine();
+                    int fase25 = int.Parse(aux25);
+                    if(fase25 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==5)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux26 = Console.ReadLine();
+                    int fase26 = int.Parse(aux26);
+                    if(fase26 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==6)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux27 = Console.ReadLine();
+                    int fase27 = int.Parse(aux27);
+                    if(fase27 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 7!\n");
+                    }
+                    }              
+                }
+
+                for(int i = 0; i<8; i++)
+                {
+                    Console.WriteLine("Fase 8\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux28 = Console.ReadLine();
+                    int fase28 = int.Parse(aux28);
+                    if(fase28 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux29 = Console.ReadLine();
+                    int fase29 = int.Parse(aux29);
+                    if(fase29 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux30 = Console.ReadLine();
+                    int fase30 = int.Parse(aux30);
+                    if(fase30 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux31 = Console.ReadLine();
+                    int fase31 = int.Parse(aux31);
+                    if(fase31 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux32 = Console.ReadLine();
+                    int fase32 = int.Parse(aux32);
+                    if(fase32 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==5)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux33 = Console.ReadLine();
+                    int fase33 = int.Parse(aux33);
+                    if(fase33 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==6)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux34 = Console.ReadLine();
+                    int fase34 = int.Parse(aux34);
+                    if(fase34 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 7!\n");
+                    }
+                    }
+                    if (i==7)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux35 = Console.ReadLine();
+                    int fase35 = int.Parse(aux35);
+                    if(fase35 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 8!\n");
+                    }
+                    }              
+                }
+
+                for(int i = 0; i<9; i++)
+                {
+                    Console.WriteLine("Fase 9\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux36 = Console.ReadLine();
+                    int fase36 = int.Parse(aux36);
+                    if(fase36 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux37 = Console.ReadLine();
+                    int fase37 = int.Parse(aux37);
+                    if(fase37 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux38 = Console.ReadLine();
+                    int fase38 = int.Parse(aux38);
+                    if(fase38 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux39 = Console.ReadLine();
+                    int fase39 = int.Parse(aux39);
+                    if(fase39 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux40 = Console.ReadLine();
+                    int fase40 = int.Parse(aux40);
+                    if(fase40 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==5)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux41 = Console.ReadLine();
+                    int fase41 = int.Parse(aux41);
+                    if(fase41 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==6)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux42 = Console.ReadLine();
+                    int fase42 = int.Parse(aux42);
+                    if(fase42 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 7!\n");
+                    }
+                    }
+                    if (i==7)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux43 = Console.ReadLine();
+                    int fase43 = int.Parse(aux43);
+                    if(fase43 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==8)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux44 = Console.ReadLine();
+                    int fase44 = int.Parse(aux44);
+                    if(fase44 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 9!\n");
+                    }
+                    }             
+                }
+
+                for(int i = 0; i<9; i++)
+                {
+                    Console.WriteLine("Fase 9\n");
+                    if(i==0)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux45 = Console.ReadLine();
+                    int fase45 = int.Parse(aux45);
+                    if(fase45 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==1)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux46 = Console.ReadLine();
+                    int fase46 = int.Parse(aux46);
+                    if(fase46 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==2)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux47 = Console.ReadLine();
+                    int fase47 = int.Parse(aux47);
+                    if(fase47 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                     if (i==3)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux48 = Console.ReadLine();
+                    int fase48 = int.Parse(aux48);
+                    if(fase48 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }   
+                    if (i==4)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux49 = Console.ReadLine();
+                    int fase49 = int.Parse(aux49);
+                    if(fase49 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    }
+                    if (i==5)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux50 = Console.ReadLine();
+                    int fase50 = int.Parse(aux50);
+                    if(fase50 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==6)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux51 = Console.ReadLine();
+                    int fase51 = int.Parse(aux51);
+                    if(fase51 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 7!\n");
+                    }
+                    }
+                    if (i==7)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux52 = Console.ReadLine();
+                    int fase52 = int.Parse(aux52);
+                    if(fase52 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    }
+                    } 
+                    if (i==8)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux53 = Console.ReadLine();
+                    int fase53 = int.Parse(aux53);
+                    if(fase53 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 9!\n");
+                    }
+                    }
+                    if (i==9)
+                    {
+                    Console.WriteLine("Digite 0 ou 1 para abrir a porta correta");
+                    var aux54 = Console.ReadLine();
+                    int fase54 = int.Parse(aux54);
+                    if(fase54 == 0)
+                    {
+                    Console.WriteLine("Abriu!");
+                    Console.WriteLine("Parabéns você passou da fase 10!\n");
+                    }
+                    }              
+                }
+            }
+            else
+            {
+                Console.WriteLine("Que triste :( você perdeu, tente novamente!");
+            }
+        }
+    }
